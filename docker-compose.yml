@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  cpp_test_template:
+    container_name: cpp_test_template
+    stdin_open: true
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/cpp_test_template
+    restart: "no"
